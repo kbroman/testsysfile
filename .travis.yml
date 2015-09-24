@@ -9,5 +9,5 @@ notifications:
     on_success: change
     on_failure: change
 
-after_script:
+before_script:
   Rscript -e 'devtools::session_info()'
