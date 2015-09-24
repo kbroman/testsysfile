@@ -9,9 +9,5 @@ notifications:
     on_success: change
     on_failure: change
 
-after_failure:
-  R -e 'devtools::session_info()'
-  cat *.Rcheck/00check.log
-
-after_success:
-  R -e 'devtools::session_info()'
+after_script:
+  Rscript -e 'devtools::session_info()'
