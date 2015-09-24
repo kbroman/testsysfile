@@ -2,6 +2,8 @@
 #'
 #' test system.file in a package
 #'
+#' @param sep character that separates records in the file
+#'
 #' @return contents of \code{inst/extdata/testfile.csv}.
 #'
 #' @examples
@@ -10,8 +12,8 @@
 #' @export
 
 testsysfile <-
-    function()
+    function(sep=",")
 {
     file <- system.file("extdata", "testfile.csv", package="testsysfile")
-    read.csv(file)
+    data.table::fread(file, sep=sep, data.table=FALSE)
 }

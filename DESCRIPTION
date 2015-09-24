@@ -5,6 +5,7 @@ Title: Test system.file
 Description: Test system.file, which is giving me errors in qtl2geno.
 Author: Karl W Broman <kbroman@biostat.wisc.edu>
 Maintainer: Karl W Broman <kbroman@biostat.wisc.edu>
+Imports: data.table
 License: GPL-3
 URL: https://github.com/kbroman/testsysfile
 LazyData: true

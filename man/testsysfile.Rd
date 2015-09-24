@@ -4,7 +4,10 @@
 \alias{testsysfile}
 \title{test system.file}
 \usage{
-testsysfile()
+testsysfile(sep = ",")
+}
+\arguments{
+\item{sep}{character that separates records in the file}
 }
 \value{
 contents of \code{inst/extdata/testfile.csv}.
