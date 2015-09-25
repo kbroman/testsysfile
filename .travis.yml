@@ -16,15 +16,12 @@ before_script:
 
 after_script:
   - echo 'after script:'
-  - R -e "devtools::install_github('kbroman/testsysfile')"
   - R -e "devtools::session_info('testsysfile')"
 
 after_success:
   - echo 'after success:'
-  - R -e "devtools::install_github('kbroman/testsysfile')"
   - R -e "devtools::session_info('testsysfile')"
 
 after_failure:
   - echo 'after failure:'
-  - R -e "devtools::install_github('kbroman/testsysfile')"
   - R -e "devtools::session_info('testsysfile')"
