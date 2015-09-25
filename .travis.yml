@@ -10,4 +10,6 @@ notifications:
     on_failure: change
 
 before_script:
-  Rscript -e 'devtools::session_info()'
+  echo 'before script:'
+  Rscript -e 'devtools::install()'
+  Rscript -e 'devtools::session_info("testsysfile")'
