@@ -10,20 +10,21 @@ notifications:
     on_failure: change
 
 before_script:
-  - echo 'before script:'
-  - R CMD INSTALL testsysfile
-  - Rscript -e 'devtools::session_info("testsysfile")'
+  - echo "before script:"
+  - R -e "devtools::install_github('kbroman/testsysfile')"
+  - R -e "devtools::session_info('testsysfile')"
 
 after_script:
   - echo 'after script:'
-  - R CMD INSTALL testsysfile
-  - Rscript -e 'devtools::session_info("testsysfile")'
+  - R -e "devtools::install_github('kbroman/testsysfile')"
+  - R -e "devtools::session_info('testsysfile')"
 
 after_success:
   - echo 'after success:'
-  - R CMD INSTALL testsysfile
-  - Rscript -e 'devtools::session_info("testsysfile")'
+  - R -e "devtools::install_github('kbroman/testsysfile')"
+  - R -e "devtools::session_info('testsysfile')"
 
 after_failure:
   - echo 'after failure:'
-  - Rscript -e 'devtools::session_info("testsysfile")'
+  - R -e "devtools::install_github('kbroman/testsysfile')"
+  - R -e "devtools::session_info('testsysfile')"
