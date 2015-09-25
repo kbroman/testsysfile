@@ -5,12 +5,14 @@ warnings_are_errors: true
 sudo: required
 
 notifications:
-  email: true
+  email:
+    on_success: change
+    on_failure: always
 
 before_script:
-  - echo "before script:"
+  - echo "Show versions:"
   - export PKG_NAME=$(Rscript -e 'cat(paste0(devtools::as.package(".")$package))')
-  - export PKG_TARBALL=$(Rscript -e 'pkg <- devtools::as.package(".");cat(paste0(pkg$package,"_",pkg$version,".tar.gz"))')
+  - export PKG_TARBALL=$(Rscript -e 'pkg <- devtools::as.package("."); cat(paste0(pkg$package,"_",pkg$version,".tar.gz"))')
   - R CMD build .
   - R CMD INSTALL ${PKG_TARBALL}
   - Rscript -e "library(${PKG_NAME});devtools::session_info('${PKG_NAME}')"
