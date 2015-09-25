@@ -11,5 +11,5 @@ notifications:
 
 before_script:
   echo 'before script:'
-  Rscript -e 'devtools::install()'
+  R CMD INSTALL testsysfile
   Rscript -e 'devtools::session_info("testsysfile")'
