@@ -1,11 +1,11 @@
 Package: testsysfile
-Version: 0.1-2
+Version: 0.1-3
 Date: 2015-09-24
-Title: Test system.file
-Description: Test system.file, which is giving me errors in qtl2geno.
+Title: A Throw-away R Package for Testing Stuff
+Description: A throw-away package constructed just to test some stuff that was giving me errors in another package.
 Author: Karl W Broman <kbroman@biostat.wisc.edu>
 Maintainer: Karl W Broman <kbroman@biostat.wisc.edu>
 Imports: data.table
-License: GPL-3
+License: MIT + file LICENSE
 URL: https://github.com/kbroman/testsysfile
 LazyData: true
