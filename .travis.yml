@@ -5,9 +5,7 @@ warnings_are_errors: true
 sudo: required
 
 notifications:
-  email:
-    on_success: change
-    on_failure: change
+  email: true
 
 before_script:
   - echo "before script:"
