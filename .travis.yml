@@ -17,3 +17,12 @@ before_script:
   - rm ${PKG_TARBALL}
   - echo "Session info:"
   - Rscript -e "library(${PKG_NAME});devtools::session_info('${PKG_NAME}')"
+
+after_script:
+  - echo "after script"
+
+after_failure:
+  - echo "after failure"
+
+after_success:
+  - echo "after success"
