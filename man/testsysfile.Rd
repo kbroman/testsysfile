@@ -16,6 +16,6 @@ contents of \code{inst/extdata/testfile.csv}.
 test system.file in a package
 }
 \examples{
-testsysfile()
+testsysfile(NULL)
 }
 

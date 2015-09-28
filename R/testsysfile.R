@@ -7,7 +7,7 @@
 #' @return contents of \code{inst/extdata/testfile.csv}.
 #'
 #' @examples
-#' testsysfile()
+#' testsysfile(NULL)
 #'
 #' @export
 
